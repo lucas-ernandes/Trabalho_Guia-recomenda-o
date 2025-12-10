@@ -5,6 +5,8 @@ body{
     color: rgb(247, 240, 240);
     font-size: 1.3rem;
     background-image: linear-gradient(#0d0d0d, #111827, #1a1a1d, #0f0f1a, #1b1b2f);
+    margin: 0;
+    padding: 30px;
 }
 
 /*h1*/
@@ -12,34 +14,34 @@ body{
     padding: 10px;
     font-family: "Anton";
     font-size: 1.8rem;
-    letter-spacing: 2rem;
+    letter-spacing: 1.6rem;
     background-color: #3e09553c;
     color: rgb(227, 221, 221);
-    font-style:oblique;
     text-align: center;
 }
 
 /*Tabelas*/
 .F1{
-    width: 80%;
+    width: 90%;
     border-collapse:collapse;
     border-style: outset;
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center;
 }
 
 td, th{
     border: 1px solid rgb(194, 3, 3);
-    padding: 5px;
+    padding: 8px;
     text-align: center;
 }
 
 .sla img{
-    display: block;
-    margin: auto;
+    width: 100%;
     height: auto;
-    width: 200px;
+    max-width: 200px;
+    border-radius: 5px;
 }
+
 .F1 tr:nth-child(even){
     background-color: rgba(242, 240, 240, 0.729);
     color: #0d0d0d;
@@ -57,9 +59,30 @@ p{
     padding: 15px;
 }
 @media (max-width: 600px){
-    p{
-        font-size: 1rem;
-        line-height: 1.8;
+    body{
+        padding: 2px;
+    }
+    th, td{
+        font-size: 14px;
+        padding: 5px;
+    }
+    img{
+        max-width: 160px;
+    }
+    ul{
+        padding-left: 20px;
+    }
+    .titulo{
+        letter-spacing: 0.2rem;
+        font-size: 1.4rem;
+    }
+    .seta{
+        right: 0;
+        top: -10px;
+        font-size: 20px;
+    }
+    .bloco{
+        overflow-x: auto;
     }
 }
 
@@ -83,10 +106,19 @@ a:hover, a:active{
 
 /*posicionar da seta*/
 .bloco{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    overflow-x: auto;
+    width: 100%;
+    position: relative;
 }
 .seta{
-    width: 25px;
+position: absolute;
+right: 40px;
+top: 10px;
+font-size: 24px;
+}
+.seta a{
+    color:#ffffff;
+}
+.seta a:hover {
+    color: rgb(22, 132, 8);
 }
